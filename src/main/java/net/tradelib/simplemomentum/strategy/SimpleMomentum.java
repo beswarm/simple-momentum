@@ -1,23 +1,15 @@
-package net.tradelib.simplemomentum;
+package net.tradelib.simplemomentum.strategy;
+
+import net.tradelib.core.*;
+import net.tradelib.functors.Roc;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-
-import net.tradelib.core.Bar;
-import net.tradelib.core.BarHistory;
-import net.tradelib.core.Calendar;
-import net.tradelib.core.Instrument;
-import net.tradelib.core.InstrumentVariation;
-import net.tradelib.core.OrderNotification;
-import net.tradelib.core.Position;
-import net.tradelib.core.Strategy;
-import net.tradelib.functors.Roc;
 
 public class SimpleMomentum extends Strategy {
    
@@ -244,7 +236,6 @@ public class SimpleMomentum extends Strategy {
    }
    
    protected void reportStatusAndAction(Status status) throws Exception {
-      
       // Setup a Strategy.Status structure
       Strategy.Status sstatus = new Strategy.Status(status.getSymbol());
       persistStatus(sstatus);

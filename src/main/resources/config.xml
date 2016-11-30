@@ -59,7 +59,7 @@
       </constructor-arg>
    </bean>
 
-   <bean id="strategy" class="net.tradelib.simplemomentum.SimpleMomentum" autowire="byName">
+   <bean id="strategy" class="net.tradelib.simplemomentum.strategy.SimpleMomentum" autowire="byName">
       <property name="lookback">
          <value>${lookback:21}</value>
       </property>
